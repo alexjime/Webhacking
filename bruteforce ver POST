@@ -2,7 +2,7 @@ import requests
 import string
 
 url = "http://webhacking.kr/challenge/bonus/bonus-2/index.php"
-cookies = {'PHPSESSID' : '87a2ba04b9ed52b3f1b129e1a340df39'}
+cookies = {'PHPSESSID' : 'my_session'}
 chr_list = string.ascii_lowercase+'1234567890'
 
 result=''
