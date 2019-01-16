@@ -1,3 +1,4 @@
+#This code make your input convert to ascii or strings(=plain text)
 import string
 
 #strings -> ascii
